@@ -1,37 +1,34 @@
-# Technolgia
-- Bootstrap (bez css)
-- PHP (xampp)
+# Vishop (SoundLab Studio)
 
-# Pomysły na nazwe
-- cbd store
-- vishop
-- pm studio
-- pdw studio
-- SoundLab Store/Studio
+### Do zrobienia
+- logowanie
+- powiadomienie o cookies
+- koszyk (wybór produktów, sposób zapłaty)
+- historia zamówień
+- grafiki, nazwy, opisy produktów
 
-# Pomysły na logo
-- płytka vinylowa z tekstem
-
-# Kolorystka
-- czarny
-- biały
-- może ciemny szary
-
-# Skrypty
+ze starego readme:
 - burger menu
 - slider
-- pliki cookies 
 
+### Technologia
+- Bootstrap (najlepiej kompletnie zamiast css)
+- PDO do bazy danych
 
-# Inne
-- cookies
-- powiadomienia
+### Pomysły na nazwę
+- vishop
+- pdw studio
+- SoundLab Store
+- SoundLab Studio
 
-# Tabele do bazy dancyH
-- produkty 
-- zamowienia 
+### Kolorystyka
+- ciemna
+- czarno biała
+- może szara
+- ciemny i jasny motyw?
 
-# Do zrobienia
-- system logowania
-- połączenie z bazą danych
-- 
+### Plan na logo
+- płyta vinylowa
+- tekst w środku lub na dole
+- czarno biała kolorystka
+- biała i czarna wersja
