@@ -6,6 +6,7 @@
 - koszyk (wybór produktów, sposób zapłaty)
 - historia zamówień
 - grafiki, nazwy, opisy produktów
+- responsywny tytuł karty
 
 ze starego readme:
 - burger menu
