@@ -1,4 +1,4 @@
-<?php require("../template/header.php"); ?>
+<?php require("../template/top.php"); ?>
 
 
 <div class="d-flex flex-column align-items-center">
@@ -7,4 +7,4 @@
 </div>
 
 
-<?php require("../template/footer.php"); ?>
+<?php require("../template/bottom.php"); ?>
