@@ -51,9 +51,9 @@
       <img src="https://github.com/mdo.png" alt="mdo" class="rounded-circle" width="32" height="32">
       </a>
       <ul class="dropdown-menu text-small">
-        <li><a id='animation' class="dropdown-item" href="#">Moje zakupy</a></li>
-        <li><a class="dropdown-item" href="#">Ustawienia</a></li>
-        <li><a class="dropdown-item" href="#">Pomoc</a></li>
+        <li><a id='animation' class="dropdown-item" href="../dashboard/index.php?link=shop">Moje zakupy</a></li>
+        <li><a class="dropdown-item" href="../dashboard/index.php?link=account">Ustawienia</a></li>
+        <li><a class="dropdown-item" href="../dashboard/index.php?link=support">Pomoc</a></li>
         <li><hr class="dropdown-divider"></li>
         <li><a class="dropdown-item" href="#">Wyloguj się</a></li>
       </ul>

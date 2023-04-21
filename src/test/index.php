@@ -1,4 +1,5 @@
 <?php require("../template/top.php"); ?>
+<?php require("../template/slaider.html"); ?>
 
 
 <section class="py-5">
