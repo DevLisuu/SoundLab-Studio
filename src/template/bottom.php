@@ -14,10 +14,10 @@
         <div class="col mb-3">
             <h5>SoundLab Studio</h5>
             <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="../test" class="nav-link p-0 text-body-secondary">Home</a></li>
-                <li class="nav-item mb-2"><a href="../error/404.php" class="nav-link p-0 text-body-secondary">Produkty</a></li>
-                <li class="nav-item mb-2"><a href="../error/404.php" class="nav-link p-0 text-body-secondary">Kontakt</a></li>
-                <li class="nav-item mb-2"><a href="../error/404.php" class="nav-link p-0 text-body-secondary">Autorzy</a></li>
+                <li class="nav-item mb-2"><a href="../home" class="nav-link p-0 text-body-secondary">Home</a></li>
+                <li class="nav-item mb-2"><a href="../products" class="nav-link p-0 text-body-secondary">Produkty</a></li>
+                <li class="nav-item mb-2"><a href="../contact" class="nav-link p-0 text-body-secondary">Kontakt</a></li>
+                <li class="nav-item mb-2"><a href="../authors" class="nav-link p-0 text-body-secondary">Autorzy</a></li>
             </ul>
         </div>
 
