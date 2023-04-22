@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logowanie</title>
+    <title>SoundLab Studio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <style>
     .gradient-custom-3 {
@@ -13,8 +13,7 @@
     </style>
 </head>
 <body>
-<section class="vh-100 bg-image"
-  style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
+<section class="vh-100 bg-image" style="background-image: url('https://mdbcdn.b-cdn.net/img/Photos/new-templates/search-box/img4.webp');">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">
       <div class="row d-flex justify-content-center align-items-center h-100">
@@ -24,31 +23,30 @@
               <h2 class="text-uppercase text-center mb-5">Załóż konto</h2>
 
               <form>
-
                 <div class="form-outline mb-3">
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example1cg">Imię</label>
-                </div>
-
-                <div class="form-outline mb-3">
                   <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
+                </div>
+
+                <div class="form-outline mb-3">
                   <label class="form-label" for="form3Example1cg">Nazwisko</label>
+                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-outline mb-3">
+                  <label class="form-label" for="form3Example3cg">Login</label>
                   <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example3cg">Adres Email</label>
                 </div>
 
                 <div class="form-outline mb-3">
+                  <label class="form-label" for="form3Example4cg">Hasło</label>
                   <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example4cg">Hasło min. 8 znaków • wielka litera • mała litera • cyfra</label>
                   
                 </div>
 
                 <div class="form-outline mb-3">
-                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
                   <label class="form-label" for="form3Example4cdg">Powtórz hasło</label>
+                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
                 </div>
 
                 <div class="form-check d-flex justify-content-center mb-5">
@@ -62,7 +60,6 @@
                   <input type="button" class="btn btn-dark btn-lg" value="Zarejestruj się" />
                 </div>
               </form>
-
             </div>
           </div>
         </div>
