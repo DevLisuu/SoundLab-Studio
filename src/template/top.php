@@ -17,6 +17,7 @@
 <body>
 
 <?php
+    session_start();
     if(basename(__FILE__) == basename($_SERVER["REQUEST_URI"])) {
         die('Bezpośredni dostęp nie jest dozwolony dla danego adresu!');
     }
@@ -36,28 +37,42 @@
       <li><a href="#" class="nav-link px-2 link-body-emphasis">Products</a></li>
     </ul>
 
-    
-    
-    <form class="d-flex" style='margin-right: 10px'>
-      <button class="btn btn-outline-dark" type="submit">
-          <i class="bi-cart-fill me-1"></i>
-          Koszyk 
-          <span class="badge bg-dark text-white ms-1 rounded-pill">10</span>
-      </button>
-    </form>
+    <?php
+      if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+        echo '
+        <form class="d-flex" style="margin-right: 10px">
+          <button class="btn btn-outline-dark" type="submit">
+              <i class="bi-cart-fill me-1"></i>
+              Koszyk 
+              <span class="badge bg-dark text-white ms-1 rounded-pill">10</span>
+          </button>
+        </form>
+        
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+          <img src="https://github.com/mdo.png" alt="mdo" class="rounded-circle" width="32" height="32">
+          </a>
+          <ul class="dropdown-menu text-small">
+            <li><a id="animation" class="dropdown-item" href="../dashboard/index.php?link=shop">Moje zakupy</a></li>
+            <li><a class="dropdown-item" href="../dashboard/index.php?link=account">Ustawienia</a></li>
+            <li><a class="dropdown-item" href="../dashboard/index.php?link=support">Pomoc</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Wyloguj się</a></li>
+          </ul>
+        </div>
+        ';
+      } else {
+          echo '
+          <div class="text-end" bis_skin_checked="1">
+            <button type="button" class="btn btn-outline-dark me-2">Zaloguj się</button>
+            <button type="button" class="btn btn-dark btn-outline me-2" style="">Zarejestruj się</button>
+          </div>          
+          ';
+      }
+    ?>
 
-    <div class="dropdown text-end">
-      <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-      <img src="https://github.com/mdo.png" alt="mdo" class="rounded-circle" width="32" height="32">
-      </a>
-      <ul class="dropdown-menu text-small">
-        <li><a id='animation' class="dropdown-item" href="../dashboard/index.php?link=shop">Moje zakupy</a></li>
-        <li><a class="dropdown-item" href="../dashboard/index.php?link=account">Ustawienia</a></li>
-        <li><a class="dropdown-item" href="../dashboard/index.php?link=support">Pomoc</a></li>
-        <li><hr class="dropdown-divider"></li>
-        <li><a class="dropdown-item" href="#">Wyloguj się</a></li>
-      </ul>
-    </div>
+
+
   </div>
 </div>
 </header>
