@@ -31,10 +31,10 @@
     </a>
 
     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="#" class="nav-link px-2 link-secondary">Overview</a></li>
-      <li><a href="#" class="nav-link px-2 link-body-emphasis">Inventory</a></li>
-      <li><a href="#" class="nav-link px-2 link-body-emphasis">Customers</a></li>
-      <li><a href="#" class="nav-link px-2 link-body-emphasis">Products</a></li>
+      <li><a href="index.php" class="nav-link px-2 link-secondary">Home</a></li>
+      <li><a href="#products" class="nav-link px-2 link-body-emphasis">Produkty</a></li>
+      <li><a href="#" class="nav-link px-2 link-body-emphasis">Kontakt</a></li>
+      <li><a href="#" class="nav-link px-2 link-body-emphasis">Autorzy</a></li>
     </ul>
 
     <?php
@@ -64,8 +64,8 @@
       } else {
           echo '
           <div class="text-end" bis_skin_checked="1">
-            <button type="button" class="btn btn-outline-dark me-2">Zaloguj się</button>
-            <button type="button" class="btn btn-dark btn-outline me-2" style="">Zarejestruj się</button>
+            <a href="../template/login.php" class="text-decoration-none btn btn-outline-dark me-2">Zaloguj się</a>
+            <a href="../template/register.php" class="btn btn-dark btn-outline me-2 " style="">Zarejestruj się</a>
           </div>          
           ';
       }
