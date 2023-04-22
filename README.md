@@ -1,32 +1,21 @@
 # Vishop (SoundLab Studio)
 
 ### Do zrobienia
-- logowanie
-- powiadomienie o cookies
+- logowanie / rejestracja
 - koszyk (wybór produktów, sposób zapłaty)
 - historia zamówień
-- grafiki, nazwy, opisy produktów
-- responsywny tytuł karty
-
-ze starego readme:
-- burger menu
-- slider
 
 ### Technologia
 - Bootstrap (najlepiej kompletnie zamiast css)
 - PDO do bazy danych
 
 ### Pomysły na nazwę
-- vishop
-- pdw studio
-- SoundLab Store
+- ~~vishop~~
 - SoundLab Studio
 
 ### Kolorystyka
-- ciemna
 - czarno biała
-- może szara
-- ciemny i jasny motyw?
+- ciemny i jasny motyw
 
 ### Plan na logo
 - płyta vinylowa
