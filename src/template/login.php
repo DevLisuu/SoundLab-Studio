@@ -41,21 +41,19 @@
                     </div>
 
                     <div class="form-outline mb-4">
-                        <label class="form-label" for="form3Example3">Adres Email</label>
-                        <input type="email" id="form3Example3" class="form-control form-control-lg" />
+                        <label class="form-label" for="form3Example3">Email</label>
+                        <input type="email" id="form3Example3" class="form-control form-control-lg" required />
                     </div>
 
                     <div class="form-outline mb-3">
                         <label class="form-label" for="form3Example4">Hasło</label>
-                        <input type="password" id="form3Example4" class="form-control form-control-lg" />
+                        <input type="password" id="form3Example4" class="form-control form-control-lg" required />
                     </div>
 
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="form-check mb-0">
-                        <input class="form-check-input me-2" type="checkbox" id="form2Example3" />
-                        <label class="form-check-label" for="form2Example3">
-                            Zapamiętaj mnie
-                        </label>
+                            <input class="form-check-input me-2" type="checkbox" id="form2Example3" checked />
+                            <label class="form-check-label" for="form2Example3">Zapamiętaj mnie</label>
                         </div>
                         <a href="#" class="text-body">Odzyskaj hasło</a>
                     </div>
@@ -68,5 +66,6 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
