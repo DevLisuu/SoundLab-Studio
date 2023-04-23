@@ -25,9 +25,9 @@
             <h5>Centrum pomocy</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="../dashboard/index.php?link=rules" class="nav-link p-0 text-body-secondary">Regulamin</a></li>
-                <li class="nav-item mb-2"><a href="../error/404.php" class="nav-link p-0 text-body-secondary">Pomoc online</a></li>
-                <li class="nav-item mb-2"><a href="../error/404.php" class="nav-link p-0 text-body-secondary">Polityka zwrotów</a></li>
-                <li class="nav-item mb-2"><a href="../error/404.php" class="nav-link p-0 text-body-secondary">Polityka plików "cookies"</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pomoc online</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Polityka zwrotów</a></li>
+                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Polityka plików "cookies"</a></li>
             </ul>
         </div>
 
