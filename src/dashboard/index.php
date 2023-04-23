@@ -1,6 +1,7 @@
 <?php require("top.php"); ?>
 
 <?php
+session_start();
     if(isset($_GET['link'])) {
         $kliknietyLink = $_GET['link'];
 
@@ -16,17 +17,18 @@
         
                 <div class="table-responsive" bis_skin_checked="1">
                 <?php
+                    $id_klienta = $_SESSION['user_id'];
                     $pdo = new PDO('mysql:host=localhost;dbname=soundlab', 'root', '');
-                    $sql = "SELECT ID, Nazwa, Data_zamowienia, Cena, Status FROM historia_zamowien";
+                    $sql = "SELECT * FROM historie_zamowien JOIN produkty ON historie_zamowien.id_produktu = produkty.id_produktu WHERE id_klienta = :id_klienta"; 
                     $stmt = $pdo->prepare($sql);
+                    $stmt->bindParam(':id_klienta', $id_klienta, PDO::PARAM_INT);
                     $stmt->execute();
                     $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
-                    // bazy danych do poprawki
                 ?>
                 <table class="table table-striped table-sm">
                     <thead>
                     <tr>
-                        <th scope="col">ID</th>
+                        <th scope="col">Numer zamówienia</th>
                         <th scope="col">Nazwa</th>
                         <th scope="col">Data zamówienia</th>
                         <th scope="col">Cena</th>
@@ -36,11 +38,11 @@
                     <tbody>
                     <?php foreach ($orders as $order): ?>
                         <tr>
-                            <td><?php echo $order['ID']; ?></td>
-                            <td><?php echo $order['Nazwa']; ?></td>
-                            <td><?php echo $order['Data_zamowienia']; ?></td>
-                            <td><?php echo $order['Cena']; ?></td>
-                            <td><?php echo $order['Status']; ?></td>
+                            <td><?php echo $order['id_zamowienia']; ?></td>
+                            <td><?php echo $order['tytul']; ?></td>
+                            <td><?php echo $order['data_zamowienia']; ?></td>
+                            <td><?php echo $order['cena']; ?></td>
+                            <td><?php echo $order['status']; ?></td>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>

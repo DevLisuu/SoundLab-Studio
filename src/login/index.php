@@ -73,10 +73,10 @@
         if ($user) {
             $_SESSION['user_id'] = $user['id_klienta'];
             $_SESSION['username'] = $user['email'];    
-            header("Location: ../test/index.php");
+            header("Location: ../home");
             exit;
         } else {
-            header("Location: ../test/loginerror.php");
+            header("Location: ../login/loginerror.php");
         }
     }
 ?>
