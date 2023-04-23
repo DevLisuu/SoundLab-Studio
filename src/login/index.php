@@ -6,24 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SoundLab Studio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <style>
-        .divider:after,.divider:before {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: #eee;
-        }
-
-        .h-custom {
-            height: calc(100% - 73px);
-        }
-
-        @media (max-width: 450px) {
-            .h-custom {
-                height: 100%;
-            }
-        }
-    </style>
+    <?php require("../template/extras.php"); ?>
 </head>
 <body>
     <section class="vh-100">
@@ -60,7 +43,7 @@
 
                     <div class="text-center text-lg-start mt-4 pt-2">
                         <button type="button" class="btn btn-secondary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;">Zaloguj się</button>
-                        <p class="small fw-bold mt-2 pt-1 mb-0">Nie masz konta? <a href="register.php" class="link-danger">Załóż konto</a></p>
+                        <p class="small fw-bold mt-2 pt-1 mb-0">Nie masz konta? <a href="../register" class="link-danger">Załóż konto</a></p>
                     </div>
                 </form>
             </div>
