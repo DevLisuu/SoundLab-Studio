@@ -30,7 +30,7 @@
 			</ul>
 
 			<?php
-				if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
+				if (true) {
 					?>
 
 					<form class="d-flex" style="margin-right: 10px">
@@ -66,6 +66,7 @@
 					<?php
 				}
 			?>
+			<i data-feather="moon"></i>
 		</div>
 	</div>
 </header>
