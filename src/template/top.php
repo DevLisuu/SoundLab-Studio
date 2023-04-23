@@ -12,6 +12,7 @@
 <body>
 
 <?php
+	session_start();
 	$pdo = new PDO('mysql:host=localhost;dbname=soundlab', 'root', '');
 ?>
 
@@ -30,7 +31,7 @@
 			</ul>
 
 			<?php
-				if (true) {
+				if (isset($_SESSION['user_id'])) {
 					?>
 
 					<form class="d-flex" style="margin-right: 10px">
@@ -50,7 +51,7 @@
 							<li><a class="dropdown-item" href="../dashboard/index.php?link=account">Ustawienia</a></li>
 							<li><a class="dropdown-item" href="../dashboard/index.php?link=support">Pomoc</a></li>
 							<li><hr class="dropdown-divider"></li>
-							<li><a class="dropdown-item" href="#">Wyloguj się</a></li>
+							<li><a class="dropdown-item" href="../login/logout.php">Wyloguj się</a></li>
 						</ul>
 					</div>
 
@@ -59,7 +60,7 @@
 					?>
 
 					<div class="text-end" bis_skin_checked="1">
-						<a href="../template/login.php" class="text-decoration-none btn btn-outline-secondary me-2">Zaloguj się</a>
+						<a href="../login" class="text-decoration-none btn btn-outline-secondary me-2">Zaloguj się</a>
 						<a href="../template/register.php" class="btn btn-secondary btn-outline me-2">Zarejestruj się</a>
 					</div>                    
 
