@@ -33,7 +33,7 @@
                     expiryDate.setTime(expiryDate.getTime() + 60 * 60 * 24 * 365);
                     const expires = "expires=" + expiryDate.toUTCString();
 
-                    document.cookie = "cookies_accepted" + "=" + "true" + ";" + expires + "path=/; samesite=strict;";
+                    document.cookie = "cookies_accepted" + "=" + "true" + ";" + expires + "path=/; samesite=lax;";
 
                     location.reload();
                 }
