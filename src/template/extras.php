@@ -20,14 +20,16 @@
 </style>
 
 <script>
+    /*
     $(document).ready(function() {
         $('.obrazek').hover(
             function() {
                 $(this).find('.nowy-obrazek').stop().fadeTo(500, 1);
             },
             function() {
-                $(this).find('.nowy-obrazek').stop().fadeTo(500, 0);
+                $(this).find('.nowy-obrazek').stop().fadeTo(300, 0);
             }
         );
     });
+    */
 </script>

@@ -24,7 +24,7 @@
                                 </div>
                                 <div class="card-body p-3">
                                     <div class="text-center">
-                                        <h5 class="fw-bolder"><?= $row["tytul"] ?> - <?= $row["wykonawca"] ?></h5><?= $row["cena"] ?>zł
+                                        <h5 class="fw-bolder"><?= $row["wykonawca"] ?> - <?= $row["tytul"] ?></h5><?= $row["cena"] ?>zł
                                     </div>
                                 </div>
                                 <div class="card-footer p-3 pt-0 border-top-0 bg-transparent">
