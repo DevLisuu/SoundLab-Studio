@@ -2,7 +2,7 @@
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
         <div class="col mb-3">
             <a class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-                <img src="../../assets/images/logo_transparent.png" alt="Logo SoundLab Studio" class="bi me-2" width="150" height="150">
+                <img src="../../assets/images/logo.png" alt="Logo SoundLab Studio" class="bi me-2" width="150" height="150">
             </a>
             <p class="text-body-secondary">© 2023 SoundLab Studio</p>
         </div>
