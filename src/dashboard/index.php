@@ -21,6 +21,7 @@
                     $stmt = $pdo->prepare($sql);
                     $stmt->execute();
                     $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    // bazy danych do poprawki
                 ?>
                 <table class="table table-striped table-sm">
                     <thead>
