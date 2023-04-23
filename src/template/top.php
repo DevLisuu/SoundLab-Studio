@@ -61,7 +61,7 @@
 
 					<div class="text-end" bis_skin_checked="1">
 						<a href="../login" class="text-decoration-none btn btn-outline-secondary me-2">Zaloguj się</a>
-						<a href="../template/register.php" class="btn btn-secondary btn-outline me-2">Zarejestruj się</a>
+						<a href="../register" class="btn btn-secondary btn-outline me-2">Zarejestruj się</a>
 					</div>                    
 
 					<?php
