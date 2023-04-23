@@ -1,6 +1,4 @@
 <?php require("../template/top.php"); ?>
-<?php require("../template/slaider.php"); ?>
-<?php require("../template/kafelki.php"); ?>
 
 <div class="d-flex flex-column align-items-center">
     <h1 class="text-center">Testowa strona do testów template</h1>
