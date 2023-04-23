@@ -45,6 +45,11 @@
                     <input type="submit" class="btn btn-secondary btn-lg" style="padding-left: 2.5rem; padding-right: 2.5rem;" value="Zaloguj się" />
                         <p class="small fw-bold mt-2 pt-1 mb-0">Nie masz konta? <a href="../register" class="link-danger">Załóż konto</a></p>
                     </div>
+
+                    <div class="divider d-flex align-items-center my-4">
+                        <h4 class="text-center mx-3 mb-0 text-danger">Błąd połączenia z bazą danych, spróbuj ponownie.</h4>
+                    </div>
+
                 </form>
             </div>
         </div>
@@ -73,7 +78,7 @@
             header("Location: ../test/index.php");
             exit;
         } else {
-            header("Location: ../test/loginerror.php");
+            echo "Nieprawidłowe dane lgowania.";
         }
     }
 ?>

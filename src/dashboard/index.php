@@ -15,6 +15,13 @@
                 <canvas class="my-4 w-100 chartjs-render-monitor" id="myChart" width="688" height="20" style="display: block; height: 5px; width: 344px;"></canvas>
         
                 <div class="table-responsive" bis_skin_checked="1">
+                <?php
+                    $pdo = new PDO('mysql:host=localhost;dbname=soundlab', 'root', '');
+                    $sql = "SELECT ID, Nazwa, Data_zamowienia, Cena, Status FROM historia_zamowien";
+                    $stmt = $pdo->prepare($sql);
+                    $stmt->execute();
+                    $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                ?>
                 <table class="table table-striped table-sm">
                     <thead>
                     <tr>
@@ -26,13 +33,15 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td>1,001</td>
-                        <td>random</td>
-                        <td>data</td>
-                        <td>placeholder</td>
-                        <td>text</td>
-                    </tr>
+                    <?php foreach ($orders as $order): ?>
+                        <tr>
+                            <td><?php echo $order['ID']; ?></td>
+                            <td><?php echo $order['Nazwa']; ?></td>
+                            <td><?php echo $order['Data_zamowienia']; ?></td>
+                            <td><?php echo $order['Cena']; ?></td>
+                            <td><?php echo $order['Status']; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
                     </tbody>
                 </table>
                 </div>
