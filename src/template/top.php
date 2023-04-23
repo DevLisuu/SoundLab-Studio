@@ -6,6 +6,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SoundLab Studio</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script>
+        $(document).ready(function() {
+            $('.obrazek').hover(
+                function() {
+                    $(this).find('.nowy-obrazek').stop().fadeTo(500, 1);
+                },
+                function() {
+                    $(this).find('.nowy-obrazek').stop().fadeTo(500, 0);
+                }
+            );
+        });
+    </script>
+	<style>
+        .obrazek img {
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .obrazek .nowy-obrazek {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .obrazek:hover .nowy-obrazek {
+            opacity: 1;
+        }
+	</style>
 </head>
 <body>
 

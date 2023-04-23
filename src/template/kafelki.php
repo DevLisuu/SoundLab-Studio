@@ -4,7 +4,10 @@
 
 			<div class="col mb-5">
 				<div class="card h-100">
-					<img class="card-img-top" src="../../assets/images/products/gang.jpg" alt="...">
+				<div class="obrazek position-relative">
+					<img class="card-img-top" src="../../assets/images/products/gang.jpg" id='obrazek 'alt="...">
+					<img class="nowy-obrazek" src="../../assets/images/products/dycha.jpg" alt="Obrazek 2">
+				</div>
 					<div class="card-body p-4">
 						<div class="text-center">
 							<h5 class="fw-bolder">Produkt 47</h5>47,47zł
@@ -18,7 +21,10 @@
 
 			<div class="col mb-5">
 				<div class="card h-100">
-					<img class="card-img-top" src="../../assets/images/products/gang.jpg" alt="...">
+				<div class="obrazek position-relative">
+					<img class="card-img-top" src="../../assets/images/products/gang.jpg" id='obrazek 'alt="...">
+					<img class="nowy-obrazek" src="../../assets/images/products/dycha.jpg" alt="Obrazek 2">
+				</div>
 					<div class="card-body p-4">
 						<div class="text-center">
 							<h5 class="fw-bolder">Produkt 47</h5>47,47zł
@@ -32,7 +38,10 @@
 
 			<div class="col mb-5">
 				<div class="card h-100">
-					<img class="card-img-top" src="../../assets/images/products/gang.jpg" alt="...">
+				<div class="obrazek position-relative">
+					<img class="card-img-top" src="../../assets/images/products/gang.jpg" id='obrazek 'alt="...">
+					<img class="nowy-obrazek" src="../../assets/images/products/dycha.jpg" alt="Obrazek 2">
+				</div>
 					<div class="card-body p-4">
 						<div class="text-center">
 							<h5 class="fw-bolder">Produkt 47</h5>47,47zł
@@ -46,7 +55,10 @@
 
 			<div class="col mb-5">
 				<div class="card h-100">
-					<img class="card-img-top" src="../../assets/images/products/gang.jpg" alt="...">
+				<div class="obrazek position-relative">
+					<img class="card-img-top" src="../../assets/images/products/gang.jpg" id='obrazek 'alt="...">
+					<img class="nowy-obrazek" src="../../assets/images/products/dycha.jpg" alt="Obrazek 2">
+				</div>
 					<div class="card-body p-4">
 						<div class="text-center">
 							<h5 class="fw-bolder">Produkt 47</h5>47,47zł
@@ -60,7 +72,10 @@
 
 			<div class="col mb-5">
 				<div class="card h-100">
-					<img class="card-img-top" src="../../assets/images/products/gang.jpg" alt="...">
+				<div class="obrazek position-relative">
+					<img class="card-img-top" src="../../assets/images/products/gang.jpg" id='obrazek 'alt="...">
+					<img class="nowy-obrazek" src="../../assets/images/products/dycha.jpg" alt="Obrazek 2">
+				</div>
 					<div class="card-body p-4">
 						<div class="text-center">
 							<h5 class="fw-bolder">Produkt 47</h5>47,47zł
@@ -74,7 +89,10 @@
 
 			<div class="col mb-5">
 				<div class="card h-100">
-					<img class="card-img-top" src="../../assets/images/products/gang.jpg" alt="...">
+				<div class="obrazek position-relative">
+					<img class="card-img-top" src="../../assets/images/products/gang.jpg" id='obrazek 'alt="...">
+					<img class="nowy-obrazek" src="../../assets/images/products/dycha.jpg" alt="Obrazek 2">
+				</div>
 					<div class="card-body p-4">
 						<div class="text-center">
 							<h5 class="fw-bolder">Produkt 47</h5>47,47zł
@@ -88,7 +106,10 @@
 
 			<div class="col mb-5">
 				<div class="card h-100">
-					<img class="card-img-top" src="../../assets/images/products/gang.jpg" alt="...">
+				<div class="obrazek position-relative">
+					<img class="card-img-top" src="../../assets/images/products/gang.jpg" id='obrazek 'alt="...">
+					<img class="nowy-obrazek" src="../../assets/images/products/dycha.jpg" alt="Obrazek 2">
+				</div>
 					<div class="card-body p-4">
 						<div class="text-center">
 							<h5 class="fw-bolder">Produkt 47</h5>47,47zł
