@@ -5,46 +5,21 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>SoundLab Studio</title>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script>
-        $(document).ready(function() {
-            $('.obrazek').hover(
-                function() {
-                    $(this).find('.nowy-obrazek').stop().fadeTo(500, 1);
-                },
-                function() {
-                    $(this).find('.nowy-obrazek').stop().fadeTo(500, 0);
-                }
-            );
-        });
-    </script>
-	<style>
-        .obrazek img {
-            width: 100%;
-            height: 100%;
-            transition: opacity 0.5s ease-in-out;
-        }
-
-        .obrazek .nowy-obrazek {
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .obrazek:hover .nowy-obrazek {
-            opacity: 1;
-        }
-	</style>
+	<?php require("../template/extras.php"); ?>
 </head>
 <body>
 
-<header class="p-3 mb-3 border-bottom">
+<?php
+	$pdo = new PDO('mysql:host=localhost;dbname=soundlab', 'root', '');
+?>
+
+<header class="p-3 mb-3 border-bottom bg-white">
 	<div class="container">
 		<div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 			<a href="#" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
-				<img src="../../assets/images/logo.png" alt="" srcset="" class="bi me-2" width="100" height="100" role="img" aria-label="Bootstrap">
+				<img src="../../assets/images/logo.png" alt="Logo SoundLab Studio" class="bi me-2" width="100" height="100" role="img">
 			</a>
 
 			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -56,12 +31,13 @@
 
 			<?php
 				if (isset($_SESSION['logged_in']) && $_SESSION['logged_in'] === true) {
-					echo '
+					?>
+
 					<form class="d-flex" style="margin-right: 10px">
 						<button class="btn btn-outline-dark" type="submit">
-								<i class="bi-cart-fill me-1"></i>
-								Koszyk 
-								<span class="badge bg-dark text-white ms-1 rounded-pill">10</span>
+							<i class="bi-cart-fill me-1"></i>
+							Koszyk
+							<span class="badge bg-dark text-white ms-1 rounded-pill">10</span>
 						</button>
 					</form>
 					
@@ -77,14 +53,17 @@
 							<li><a class="dropdown-item" href="#">Wyloguj się</a></li>
 						</ul>
 					</div>
-					';
+
+					<?php
 				} else {
-						echo '
-						<div class="text-end" bis_skin_checked="1">
-							<a href="../template/login.php" class="text-decoration-none btn btn-outline-dark me-2">Zaloguj się</a>
-							<a href="../template/register.php" class="btn btn-dark btn-outline me-2 " style="">Zarejestruj się</a>
-						</div>                    
-						';
+					?>
+
+					<div class="text-end" bis_skin_checked="1">
+						<a href="../template/login.php" class="text-decoration-none btn btn-outline-dark me-2">Zaloguj się</a>
+						<a href="../template/register.php" class="btn btn-dark btn-outline me-2 " style="">Zarejestruj się</a>
+					</div>                    
+
+					<?php
 				}
 			?>
 		</div>

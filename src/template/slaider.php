@@ -7,13 +7,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png" class="d-block w-100" style="aspect-ratio: 21/9;" alt="...">
-      </div>
-      <div class="carousel-item">
         <img src="https://i.ytimg.com/vi/s7Z75i_xYZg/maxresdefault.jpg" class="d-block w-100" style="aspect-ratio: 21/9;" alt="...">
       </div>
       <div class="carousel-item">
-        <img src="https://i.kym-cdn.com/entries/icons/original/000/041/895/AALIYAH_WROTE_JAY_AN_APOLOGY_LETTER%F0%9F%93%83__MARK_WANT_DESIREE_AND_HANNAH!%F0%9F%98%B1_4-32_screenshot_(1).jpg" class="d-block w-100" style="aspect-ratio: 21/9;" alt="...">
+        <img src="https://preview.redd.it/qc1ixihm8fh31.jpg?width=960&crop=smart&auto=webp&v=enabled&s=775ac2e969d88f0789e58a57d625dc7ef103ae70" class="d-block w-100" style="aspect-ratio: 21/9;" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/03/Walter_White_S5B.png" class="d-block w-100" style="aspect-ratio: 21/9;" alt="...">
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

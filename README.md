@@ -1,9 +1,10 @@
-# Vishop (SoundLab Studio)
+# SoundLab Studio
 
 ### Do zrobienia
 - logowanie / rejestracja
 - koszyk (wybór produktów, sposób zapłaty)
 - historia zamówień
+- przezroczyste logo (ciemny motyw)
 
 ### Technologia
 - Bootstrap (najlepiej kompletnie zamiast css)
