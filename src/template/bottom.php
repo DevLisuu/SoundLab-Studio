@@ -2,7 +2,7 @@
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
         <div class="col mb-3">
             <a class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
-                <img src="../../assets/images/logo.png" alt="Logo SoundLab Studio" class="bi me-2" width="150" height="150">
+                <img src="../../assets/images/logo_dark.png" alt="Logo SoundLab Studio" class="logoSL bi me-2" width="150" height="150">
             </a>
             <p class="text-body-secondary">© 2023 SoundLab Studio</p>
         </div>
@@ -65,9 +65,19 @@
         if(storedTheme == "dark") {
             document.documentElement.setAttribute('data-bs-theme', 'dark');
             themeSwitcher.innerHTML = '<i data-feather="moon"></i>';
+
+            const logos = document.querySelectorAll(".logoSL");
+            for (const img of Array.from(logos)) {
+                img.src = "../../assets/images/logo_light.png"
+            }
         } else {
             document.documentElement.setAttribute('data-bs-theme', 'light');
             themeSwitcher.innerHTML = '<i data-feather="sun"></i>'; 
+
+            const logos = document.querySelectorAll(".logoSL");
+            for (const img of Array.from(logos)) {
+                img.src = "../../assets/images/logo_dark.png"
+            }
         }
 
         feather.replace();
