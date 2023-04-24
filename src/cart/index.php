@@ -4,34 +4,27 @@
 <div class="row g-5">
       <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Your cart</span>
+          <span class="text-primary">Twój koszyk</span>
           <span class="badge bg-primary rounded-pill">3</span>
         </h4>
         <ul class="list-group mb-3">
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
-              <h6 class="my-0">Masno</h6>
-              <small class="text-body-secondary">by masno</small>
+              <h6 class="my-0">GANG</h6>
+              <small class="text-body-secondary">MASNO</small>
             </div>
-            <span class="text-body-secondary">$12</span>
+            <span class="text-body-secondary">10zł</span>
           </li>
           <li class="list-group-item d-flex justify-content-between lh-sm">
             <div>
-              <h6 class="my-0">Second product</h6>
-              <small class="text-body-secondary">Brief description</small>
+              <h6 class="my-0">Pretty Boy</h6>
+              <small class="text-body-secondary">White2115</small>
             </div>
-            <span class="text-body-secondary">$8</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Third item</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$5</span>
+            <span class="text-body-secondary">10zł</span>
           </li>
           <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
-            <strong>$20</strong>
+            <span>Łącznie</span>
+            <strong>20zł</strong>
           </li>
         </ul>
 
@@ -112,7 +105,7 @@
 
           <hr class="my-4">
 
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Zamów</button>
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Zamawiam</button>
         </form>
       </div>
     </div>
