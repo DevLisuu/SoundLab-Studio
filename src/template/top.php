@@ -24,7 +24,7 @@
 			</a>
 
 			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-				<li><a href="../home" class="nav-link px-2 link-secondary">Home</a></li>
+				<li><a href="../home" class="nav-link px-2 link-body-emphasis">Home</a></li>
 				<li><a href="../products" class="nav-link px-2 link-body-emphasis">Produkty</a></li>
 				<li><a href="../contact" class="nav-link px-2 link-body-emphasis">Kontakt</a></li>
 				<li><a href="../authors" class="nav-link px-2 link-body-emphasis">Autorzy</a></li>
