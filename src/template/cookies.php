@@ -1,43 +1,53 @@
-<?php
-    if(!isset($_COOKIE["cookies_accepted"])) {
-        ?>  
-            <div class="modal fade" id="cookieModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Ciasteczka!</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h4>Ta strona wykorzystuje pliki cookies</h4>
-                        <p>
-                            Cookies (popularnie zwane też ciasteczkami) to pliki wysyłane przez serwis internetowy i zapisywane w przeglądarce użytkownika.
-                            Są stosowane w celu śledzenia ruchu na stronie, ułatwiają prawidłowe funkcjonowanie witryny, a także pomagają dostosować stronę do wymagań poszczególnych internautów, zapamiętując ich preferencje oraz sposób zachowania w serwisie.
-                            Mogą być także wykorzystywane do przechowywania haseł i danych do logowania.
-                        </p>
-                    </div>
-                    <div class="modal-footer">
-                        <button onclick="setCookie()" class="btn btn-success">Zgadzam się</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
+<div class="modal fade" id="cookieModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Ciasteczka!</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <h4>Ta strona wykorzystuje pliki cookies</h4>
+            <p>
+                Cookies (popularnie zwane też ciasteczkami) to pliki wysyłane przez serwis internetowy i zapisywane w przeglądarce użytkownika.
+                Są stosowane w celu śledzenia ruchu na stronie, ułatwiają prawidłowe funkcjonowanie witryny, a także pomagają dostosować stronę do wymagań poszczególnych internautów, zapamiętując ich preferencje oraz sposób zachowania w serwisie.
+                Mogą być także wykorzystywane do przechowywania haseł i danych do logowania.
+            </p>
+        </div>
+        <div class="modal-footer">
+            <button onclick="setCookie('cookie_accepted', 'true')" class="btn btn-success" data-bs-dismiss="modal" aria-label="Close">Zgadzam się</button>
+        </div>
+        </div>
+    </div>
+</div>
 
-            <script>
-                window.onload = () => {
-                    $("#cookieModal").modal('show');
-                }
+<script>
 
-                function setCookie() {
-                    const expiryDate = new Date();
-                    expiryDate.setTime(expiryDate.getTime() + 60 * 60 * 24 * 365);
-                    const expires = "expires=" + expiryDate.toUTCString();
-
-                    document.cookie = "cookies_accepted" + "=" + "true" + ";" + expires + "path=/; samesite=lax;";
-
-                    location.reload();
-                }
-            </script>
-        <?php
+    window.onload = () => {
+        if (getCookie('cookie_accepted') !== 'true') {
+            $("#cookieModal").modal('show');
+        }
     }
-?>
+
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for(let i = 0; i <ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return null;
+    }
+
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        let expires = "expires="+ d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+</script>
