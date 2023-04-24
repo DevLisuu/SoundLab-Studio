@@ -38,6 +38,7 @@ CREATE TABLE historie_zamowien (
   id_produktu INT NOT NULL,
   ilosc INT NOT NULL,
   cena DECIMAL(10,2) NOT NULL,
+  rodzaj_płatności VARCHAR(255),
   data_zamowienia DATETIME NOT NULL,
   status VARCHAR(20) NOT NULL,
   PRIMARY KEY (id_zamowienia)
@@ -58,5 +59,3 @@ INSERT INTO `produkty` (`id_produktu`, `tytul`, `wykonawca`, `cena`, `zdjecie`, 
 (9, '2.0', 'Chillwagon', 28.99, '2.0.jpg', '2.02.jpg'),
 (10, 'Jeszcze pięć minut', 'Kizo', 46.99, 'jeszczepiecminut.jpg', 'jeszczepiecminut2.jpg');
 
-
-INSERT INTO `historie_zamowien`(`id_produktu`, `ilosc`, `cena`, `data_zamowienia`) VALUES (1,1,10,2020-1-1)
