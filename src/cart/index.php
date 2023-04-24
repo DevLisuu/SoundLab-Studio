@@ -5,26 +5,41 @@
       <div class="col-md-5 col-lg-4 order-md-last">
         <h4 class="d-flex justify-content-between align-items-center mb-3">
           <span class="text-primary">Twój koszyk</span>
-          <span class="badge bg-primary rounded-pill">3</span>
+          <span class="badge bg-primary rounded-pill koszyk-badge"></span>
         </h4>
         <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">GANG</h6>
-              <small class="text-body-secondary">MASNO</small>
-            </div>
-            <span class="text-body-secondary">10zł</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Pretty Boy</h6>
-              <small class="text-body-secondary">White2115</small>
-            </div>
-            <span class="text-body-secondary">10zł</span>
-          </li>
+          <?php 
+          $pdo = new PDO('mysql:host=localhost;dbname=soundlab', 'root', '');
+
+          if (!isset($_COOKIE['koszyk']) || empty($_COOKIE["koszyk"])) {
+              $_COOKIE['koszyk'] = json_encode([]);
+          }
+
+          $koszyk = json_decode($_COOKIE["koszyk"]);
+          $koszykStr = join(',', $koszyk);
+
+          $result = $pdo->query("SELECT id_produktu, tytul, wykonawca, cena from produkty WHERE id_produktu IN ($koszykStr)");
+
+          $rows = $result->fetchAll();
+
+          $suma = 0;
+          foreach ($rows as $row) {
+            $suma += $row["cena"];
+            ?>
+            <li class="list-group-item d-flex justify-content-between lh-sm">
+              <div>
+                <h6 class="my-0"><?= $row["wykonawca"] ?></h6>
+                <small class="text-body-secondary"><?= $row["tytul"] ?></small>
+              </div>
+              <span class="text-body-secondary"><?= $row["cena"] ?>zł</span>
+            </li>
+            <?php
+          }
+
+          ?>
           <li class="list-group-item d-flex justify-content-between">
             <span>Łącznie</span>
-            <strong>20zł</strong>
+            <strong><?= $suma ?>zł</strong>
           </li>
         </ul>
 

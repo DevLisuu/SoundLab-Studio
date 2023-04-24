@@ -63,7 +63,7 @@
                 return c.substring(name.length, c.length);
             }
         }
-        return null;
+        return '';
     }
 
     function setCookie(cname, cvalue, exdays) {

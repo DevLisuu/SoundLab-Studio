@@ -1,10 +1,22 @@
 <?php require("../template/top.php"); ?>
 
+<?php
+    $pdo = new PDO('mysql:host=localhost;dbname=soundlab', 'root', '');
+    $result = $pdo->query("SELECT * from produkty");
+
+    $rows = $result->fetchAll();
+
+    if (!isset($_COOKIE['koszyk']) || empty($_COOKIE["koszyk"])) {
+        $_COOKIE['koszyk'] = json_encode([]);
+    }
+
+?>
+
 <section class="py-5">
 	<div class="container px-4 px-lg-5 ">
 		<div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <?php
-                $result = $pdo->query("select * from produkty");
+                $result = $pdo->query("SELECT * FROM produkty");
                 $rows = $result->fetchAll();
 
                 
@@ -25,9 +37,7 @@
                                 <?php
                                    if (isset($_SESSION['user_id'])) {
                                 ?>
-                                 <form method="POST" action="shop.php"> 
-                                     <div class="text-center"><input type="submit" class="text-center btn btn-outline-success mt-auto" value="Dodaj do koszyka"></div>
-                                </form>
+                                <div class="text-center"><button type="submit" class="text-center btn btn-outline-success mt-auto" onclick="dodajdokoszyka(<?= $row['id_produktu'] ?>)">Dodaj do koszyk</button></div>
                                 
                                 <?php
                                 } else {
