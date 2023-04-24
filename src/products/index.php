@@ -21,7 +21,17 @@
                                     </div>
                                 </div>
                                 <div class="card-footer p-3 pt-0 border-top-0 bg-transparent">
+                                <?php
+                                   if (isset($_SESSION['user_id'])) {
+                                ?>
                                     <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Dodaj do koszyka</a></div>
+                                <?php
+                                } else {
+                                    ?>
+                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="../login">Dodaj do koszyka</a></div>
+                                <?php
+                                 }
+                                ?>
                                 </div>
                             </div>
                         </div>
