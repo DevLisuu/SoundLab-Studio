@@ -35,11 +35,11 @@
 					?>
 
 					<form class="d-flex" style="margin-right: 10px">
-						<button class="btn btn-outline-success" type="submit">
-							<i class="bi-cart-fill me-1"></i>
-							Koszyk
-							<span class="badge bg-secondary text-white ms-1 rounded-pill">10</span>
-						</button>
+					<div class="button border">
+						<a href='../cart' class="btn btn-outline-success><i class="bi-cart-fill me-1"></i>Koszyk
+						<span class="badge bg-secondary text-white ms-1 rounded-pill">10</span>
+						</a>
+					</div>
 					</form>
 					
 					<div class="dropdown text-end">

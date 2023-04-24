@@ -7,6 +7,7 @@
                 $result = $pdo->query("select * from produkty");
                 $rows = $result->fetchAll();
 
+                
                 foreach($rows as $row) {
                     ?>
                         <div class="col mb-5">
@@ -24,11 +25,14 @@
                                 <?php
                                    if (isset($_SESSION['user_id'])) {
                                 ?>
-                                    <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Dodaj do koszyka</a></div>
+                                 <form method="POST" action="shop.php"> 
+                                     <div class="text-center"><input type="submit" class="text-center btn btn-outline-success mt-auto" value="Dodaj do koszyka"></div>
+                                </form>
+                                
                                 <?php
                                 } else {
                                     ?>
-                                <div class="text-center"><a class="btn btn-outline-success mt-auto" href="../login">Dodaj do koszyka</a></div>
+                                    <div class="text-center"><a class="btn btn-outline-success mt-auto" href="../login">Dodaj do koszyka</a></div>
                                 <?php
                                  }
                                 ?>
