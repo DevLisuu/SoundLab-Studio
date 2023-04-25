@@ -20,33 +20,27 @@
       <div class="position-sticky pt-3" bis_skin_checked="1">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../home" >
-            <i data-feather="home"></i>
-              Home
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.php?link=account">
-            <i data-feather="settings"></i>
-              Ustawienia konta
-            </a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="index.php?link=shop">
             <i data-feather="shopping-cart"></i>
               Zamówienia
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="index.php?link=rules">
+              <i data-feather="layers"></i>
+              Regulamin
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="index.php?link=support">
-            <i data-feather="users"></i>
+              <i data-feather="users"></i>
               Pomoc
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.php?link=rules">
-            <i data-feather="layers"></i>
-              Regulamin
+            <a class="nav-link active" aria-current="page" href="../home" >
+            <i data-feather="home"></i>
+              Home
             </a>
           </li>
         </ul>

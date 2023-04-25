@@ -1,4 +1,3 @@
-
 let koszyk;
 
 function getCookie(cname) {

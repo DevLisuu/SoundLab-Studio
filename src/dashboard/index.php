@@ -1,8 +1,9 @@
 <?php require("top.php"); ?>
 
 <?php
-session_start();
-    if(isset($_GET['link'])) {
+    session_start();
+
+    if(isset($_GET['link']) && isset($_SESSION['user_id'])) {
         $kliknietyLink = $_GET['link'];
 
         switch ($kliknietyLink) {
@@ -19,11 +20,12 @@ session_start();
                 <?php
                     $id_klienta = $_SESSION['user_id'];
                     $pdo = new PDO('mysql:host=localhost;dbname=soundlab', 'root', '');
-                    $sql = "SELECT * FROM historie_zamowien JOIN produkty ON historie_zamowien.id_produktu = produkty.id_produktu WHERE id_klienta = :id_klienta"; 
+                    $sql = "SELECT * FROM zamowienia JOIN produkty ON zamowienia.id_produktu = produkty.id_produktu WHERE id_klienta = :id_klienta"; 
                     $stmt = $pdo->prepare($sql);
                     $stmt->bindParam(':id_klienta', $id_klienta, PDO::PARAM_INT);
                     $stmt->execute();
                     $orders = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                    $pdo = null;
                 ?>
                 <table class="table table-striped table-sm">
                     <thead>
@@ -32,7 +34,6 @@ session_start();
                         <th scope="col">Nazwa</th>
                         <th scope="col">Data zamówienia</th>
                         <th scope="col">Cena</th>
-                        <th scope="col">Status</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -42,7 +43,6 @@ session_start();
                             <td><?php echo $order['tytul']; ?></td>
                             <td><?php echo $order['data_zamowienia']; ?></td>
                             <td><?php echo $order['cena']; ?></td>
-                            <td><?php echo $order['status']; ?></td>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>
@@ -59,12 +59,7 @@ session_start();
                 <?php
                 break;
             case 'support':
-                ?>
-                <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor" bis_skin_checked="1"><div class="chartjs-size-monitor-expand" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div><div class="chartjs-size-monitor-shrink" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div></div>
-                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom" bis_skin_checked="1">
-                <h1 class="h2">Pomoc Techniczna</h1>
-                <?php
-                break;
+                    header("Location: ../contact");
             case 'reports':
                 ?>
                 <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4"><div class="chartjs-size-monitor" bis_skin_checked="1"><div class="chartjs-size-monitor-expand" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div><div class="chartjs-size-monitor-shrink" bis_skin_checked="1"><div class="" bis_skin_checked="1"></div></div></div>
@@ -98,6 +93,8 @@ session_start();
                 <?php
                 break;
         }
+    }else {
+        header("Location: ../home");
     }
 ?>
 
