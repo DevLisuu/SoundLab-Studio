@@ -1,6 +1,6 @@
 <?php require("../template/top.php"); ?>
 
-<div class="container">
+<div class="container m-5 p-5">
     <h2>Nasze drogi kontaktowe</h2>
     <ul>
         <li><h4>E-mail: laskmaska@example.com</h4></li>

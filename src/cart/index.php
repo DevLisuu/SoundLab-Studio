@@ -24,10 +24,14 @@
 
           $suma = 0;
 
+          if(!(count($koszyk) > 0) && isset($_POST["zamow"])) {
+            header("Location: ../products");
+          }
+
           if(count($koszyk) > 0) {
             if(isset($_POST["zamow"])) {
               for($i=0; $i < count($koszyk); $i++) {
-                $result = $pdo->query("INSERT INTO `zamowienia` (`id_klienta`, `id_produktu`, `rodzaj_płatności`, `data_zamowienia`) VALUES ('".$_SESSION['user_id']."', '".$koszyk[$i]."', '".$_POST['metodap']."', CURRENT_TIMESTAMP())");
+                $result = $pdo->query("INSERT INTO `zamowienia` (`id_klienta`, `id_produktu`, `rodzaj_platnosci`, `data_zamowienia`) VALUES ('".$_SESSION['user_id']."', '".$koszyk[$i]."', '".$_POST['metodap']."', CURRENT_TIMESTAMP())");
               }
 
               header("Location: wyczysckoszyk.php");
@@ -49,7 +53,7 @@
               </li>
               <?php
             }
-          } 
+          }
 
           $pdo = null;
         ?>
@@ -112,15 +116,15 @@
 
           <div class="my-3">
             <div class="form-check">
-              <input id="karta" name="metodap" type="radio" class="form-check-input" checked="" required="">
+              <input id="karta" value="karta" name="metodap" type="radio" class="form-check-input" checked="" required="">
               <label class="form-check-label" for="karta">Karta</label>
             </div>
             <div class="form-check">
-              <input id="paypal" name="metodap" type="radio" class="form-check-input" required="">
+              <input id="paypal" value="paypal" name="metodap" type="radio" class="form-check-input" required="">
               <label class="form-check-label" for="paypal">PayPal</label>
             </div>
             <div class="form-check">
-              <input id="paysafecard" name="metodap" type="radio" class="form-check-input" required="">
+              <input id="paysafecard" value="paysafecard" name="metodap" type="radio" class="form-check-input" required="">
               <label class="form-check-label" for="paysafecard">PaySafeCard</label>
             </div>
           </div>

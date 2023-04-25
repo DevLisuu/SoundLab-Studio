@@ -34,6 +34,7 @@
                         <th scope="col">Nazwa</th>
                         <th scope="col">Data zamówienia</th>
                         <th scope="col">Cena</th>
+                        <th scope="col">Rodzaj płatności</th>
                     </tr>
                     </thead>
                     <tbody>
@@ -43,6 +44,7 @@
                             <td><?php echo $order['tytul']; ?></td>
                             <td><?php echo $order['data_zamowienia']; ?></td>
                             <td><?php echo $order['cena']; ?></td>
+                            <td><?php echo $order['rodzaj_platnosci']; ?></td>
                         </tr>
                     <?php endforeach; ?>
                     </tbody>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 25, 2023 at 02:55 PM
+-- Generation Time: Apr 25, 2023 at 04:06 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -20,41 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `soundlab`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `historie_zamowien`
---
-
-CREATE TABLE `historie_zamowien` (
-  `id_zamowienia` int(11) NOT NULL,
-  `id_klienta` int(11) NOT NULL,
-  `id_produktu` int(11) NOT NULL,
-  `ilosc` int(11) NOT NULL,
-  `cena` decimal(10,2) NOT NULL,
-  `rodzaj_płatności` varchar(255) DEFAULT NULL,
-  `data_zamowienia` datetime NOT NULL,
-  `status` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `klienci`
---
-
-CREATE TABLE `klienci` (
-  `id_klienta` int(11) NOT NULL,
-  `imie` varchar(255) DEFAULT NULL,
-  `nazwisko` varchar(255) DEFAULT NULL,
-  `email` varchar(255) DEFAULT NULL,
-  `haslo` varchar(255) DEFAULT NULL,
-  `adres` varchar(255) DEFAULT NULL,
-  `miasto` varchar(255) DEFAULT NULL,
-  `kod_pocztowy` varchar(10) DEFAULT NULL,
-  `telefon` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
 
 -- --------------------------------------------------------
 
@@ -108,21 +73,23 @@ CREATE TABLE `uzytkownicy` (
 INSERT INTO `uzytkownicy` (`id_klienta`, `imie`, `nazwisko`, `email`, `haslo`) VALUES
 (2, 'a', 'a', 'a@a', '12345678');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zamowienia`
+--
+
+CREATE TABLE `zamowienia` (
+  `id_zamowienia` int(11) NOT NULL,
+  `id_klienta` int(11) NOT NULL,
+  `id_produktu` int(11) NOT NULL,
+  `rodzaj_platnosci` varchar(255) NOT NULL,
+  `data_zamowienia` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_polish_ci;
+
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `historie_zamowien`
---
-ALTER TABLE `historie_zamowien`
-  ADD PRIMARY KEY (`id_zamowienia`);
-
---
--- Indexes for table `klienci`
---
-ALTER TABLE `klienci`
-  ADD PRIMARY KEY (`id_klienta`);
 
 --
 -- Indexes for table `produkty`
@@ -137,20 +104,16 @@ ALTER TABLE `uzytkownicy`
   ADD PRIMARY KEY (`id_klienta`);
 
 --
+-- Indexes for table `zamowienia`
+--
+ALTER TABLE `zamowienia`
+  ADD PRIMARY KEY (`id_zamowienia`),
+  ADD KEY `id_produktu` (`id_produktu`),
+  ADD KEY `id_klienta` (`id_klienta`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `historie_zamowien`
---
-ALTER TABLE `historie_zamowien`
-  MODIFY `id_zamowienia` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `klienci`
---
-ALTER TABLE `klienci`
-  MODIFY `id_klienta` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `produkty`
@@ -163,6 +126,24 @@ ALTER TABLE `produkty`
 --
 ALTER TABLE `uzytkownicy`
   MODIFY `id_klienta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `zamowienia`
+--
+ALTER TABLE `zamowienia`
+  MODIFY `id_zamowienia` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `zamowienia`
+--
+ALTER TABLE `zamowienia`
+  ADD CONSTRAINT `zamowienia_ibfk_1` FOREIGN KEY (`id_klienta`) REFERENCES `uzytkownicy` (`id_klienta`),
+  ADD CONSTRAINT `zamowienia_ibfk_2` FOREIGN KEY (`id_produktu`) REFERENCES `produkty` (`id_produktu`),
+  ADD CONSTRAINT `zamowienia_ibfk_3` FOREIGN KEY (`id_klienta`) REFERENCES `uzytkownicy` (`id_klienta`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
