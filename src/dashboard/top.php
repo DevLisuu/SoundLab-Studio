@@ -12,7 +12,7 @@
   <button class="navbar-toggler d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="../test">SoundLab Store</a>
+  <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="../home">SoundLab Store</a>
 </header>
 <div class="container-fluid" bis_skin_checked="1">
   <div class="row" bis_skin_checked="1">
@@ -20,7 +20,7 @@
       <div class="position-sticky pt-3" bis_skin_checked="1">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="../test/index.php" >
+            <a class="nav-link active" aria-current="page" href="../home" >
             <i data-feather="home"></i>
               Home
             </a>

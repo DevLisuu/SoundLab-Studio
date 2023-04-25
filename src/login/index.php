@@ -14,7 +14,7 @@
             <div class="row d-flex justify-content-center align-items-center h-100">
             
             <div class="col-auto">
-                <img src="../../assets/images/logo.png" class="img-fluid" alt="Sample image">
+                <img src="../../assets/images/logo_dark.png" class="img-fluid" alt="Sample image">
             </div>
 
             <div class="col-md-9 col-lg-6 col-xl-4 offset-xl-1">
@@ -32,6 +32,21 @@
                         <label class="form-label" for="form3Example4">Hasło</label>
                         <input type="password" id="form3Example4" class="form-control form-control-lg" name="password" required />
                     </div>
+
+                    <?php
+                        session_start();
+                        
+                        if(isset($_SESSION['loginerror']) && isset($_POST["username"])) {
+                            if($_SESSION['loginerror'] == true) {
+                            $_SESSION['loginerror'] = null;
+                    ?>
+                    <div class="divider d-flex align-items-center my-4">
+                        <h4 class="text-center mx-3 mb-0 text-danger">Hasło lub login są błędne, spróbuj ponownie.</h4>
+                    </div>
+                    <?php
+                            }
+                        }
+                    ?>
 
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="form-check mb-0">
@@ -52,7 +67,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 <?php
-    session_start();
     try {
         $conn = new PDO('mysql:host=localhost;dbname=soundlab', 'root', '');
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -76,7 +90,7 @@
             header("Location: ../home");
             exit;
         } else {
-            header("Location: ../login/loginerror.php");
+            $_SESSION['loginerror'] = true;
         }
     }
 ?>

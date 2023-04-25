@@ -28,7 +28,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer p-3 pt-0 border-top-0 bg-transparent">
-                                    <div class="text-center"><a class="btn btn-outline-success mt-auto" href="#">Dodaj do koszyka</a></div>
+                                    <div class="text-center"><a class="btn btn-outline-success mt-auto" href="../products">Zobacz więcej</a></div>
                                 </div>
                             </div>
                         </div>

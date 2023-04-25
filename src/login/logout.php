@@ -6,5 +6,5 @@ unset($_SESSION['username']);
 
 session_destroy();
 
-header('Location: ../test');
+header('Location: ../home');
 exit();

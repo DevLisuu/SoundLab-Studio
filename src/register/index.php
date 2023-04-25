@@ -30,12 +30,7 @@
         return;
       }
 
-      do {
-          $token = random_int(10000, 9999999);
-          $result = $pdo->query("select * from uzytkownicy where token='$token'");
-      } while($result->rowCount() > 0);
-
-      $sql = "insert into uzytkownicy(imie, nazwisko, email, haslo, token) values ('$imie', '$nazwisko', '$email', '$password', '$token')";
+      $sql = "insert into uzytkownicy(imie, nazwisko, email, haslo) values ('$imie', '$nazwisko', '$email', '$password')";
       $pdo->query($sql);
 
       $pdo = null;
@@ -45,7 +40,7 @@
     register();
   ?>
 
-  <section class="vh-100 bg-image" style="background-image: url('../../assets/images/logo.png');">
+  <section class="vh-100 bg-image" style="background-image: url('../../assets/images/logo_dark.png');">
     <div class="mask d-flex align-items-center h-100">
       <div class="container h-100">
         <div class="row d-flex justify-content-center align-items-center h-100">
