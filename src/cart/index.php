@@ -63,6 +63,8 @@
           </li>
         </ul>
 
+        <a href="wyczysckoszyk.php" class="text-center btn btn-outline-danger">Wyczyść koszyk</a>
+
       </div>
       <div class="col-md-7 col-lg-8">
         <h4 class="mb-3">Dane zamówienia</h4>
